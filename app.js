@@ -11,14 +11,22 @@ mongoose.connect("mongodb://localhost:27017/test2")
     .then(() => console.log("Database Connected! 😉"))
     .catch((err) => console.log(err));
 
-const ItemsSchema = new mongoose.Schema({
+const itemsSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
     }
 });
 
-const Item = mongoose.model("item", ItemsSchema);
+const Item = new mongoose.model("Item", itemsSchema);
+
+
+const listSchema = new mongoose.Schema({
+    name: String,
+    items: [itemsSchema]
+})
+
+const List = new mongoose.model("List", listSchema);
 
 
 app.get('/', (req, res) => {
