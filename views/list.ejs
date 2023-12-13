@@ -20,6 +20,7 @@
         <% newListItems.map((item)=> { %>
             <form action="/delete" method="post">
                 <div class="item">
+                    <input type="hidden" name="listTitle" value="<%= listTitle %>">
                     <input type="checkbox" name="id" value="<%= item._id %>" onchange="this.form.submit()">
                     <p>
                         <%= item.name %>
@@ -30,13 +31,8 @@
 
                 <form action="/" method="post" class="item">
                     <input type="text" name="newItem" placeholder="Add item.." autocomplete="off">
-                    <button type="submit">+</button>
+                    <button type="submit" name="listTitle" value="<%= listTitle %>">+</button>
                 </form>
-                <% if(formErr) { %>
-                    <p class="error">
-                        <%= "Input field is empty!" %>
-                    </p>
-                <% } %>
     </div>
 
 </body>
