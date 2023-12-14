@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-const dbUrl = "mongodb+srv://hematw:*****@unity.bexrwac.mongodb.net/"
+const dbUrl = "mongodb+srv://hematw:afghanistan@12@unity.bexrwac.mongodb.net/"
 
 mongoose.connect(dbUrl)
     .then(() => console.log("Database Connected! 😉"))
