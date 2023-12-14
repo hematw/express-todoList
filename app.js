@@ -8,7 +8,9 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-mongoose.connect("mongodb://localhost:27017/test2")
+const dbUrl = "mongodb+srv://hematw:*****@unity.bexrwac.mongodb.net/"
+
+mongoose.connect(dbUrl)
     .then(() => console.log("Database Connected! 😉"))
     .catch((err) => console.log(err));
 
