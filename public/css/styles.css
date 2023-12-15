@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&display=swap');
+
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #50BFF1 50%, #F3D765 50%);
   min-height: 100vh;
-  font-family: 'cursive';
+  font-family: 'Kanit', sans-serif;
 }
 
 h1 {
